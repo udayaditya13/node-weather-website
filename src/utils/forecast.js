@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
             callback('Incorrect Coordinates', undefined)
         }else{
             const curr = body.currently
-            callback(undefined, body.daily.data[0].summary + ' it is currently ' + curr.temperature + ' degrees. there is ' + curr.precipProbability + ' chance of rain')
+            callback(undefined, body.daily.data[0].summary + ' It is currently ' + curr.temperature + ' degrees. There is ' + curr.precipProbability + '% chance of rain. The UV index is ' + curr.uvIndex)
         }
     })
 }
